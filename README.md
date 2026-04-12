@@ -1,6 +1,6 @@
-# AniList-TUI
+# AniList-TUI (Unofficial)
 
-AniList-TUI is a terminal user interface for browsing anime, searching titles, and managing your AniList library without leaving the terminal.
+AniList-TUI is an unofficial terminal user interface for browsing anime, searching titles, and managing your AniList library without leaving the terminal.
 
 ## Preview
 
