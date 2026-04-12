@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anilist-tui"
+version = "0.1.0"
+description = "Terminal UI client for AniList built with Textual"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "html2text>=2025.4.15",
+    "httpx>=0.28.1",
+    "pillow>=12.2.0",
+    "textual>=1.8.0",
+    "textual-image>=0.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.20.0",
+    "textual-dev>=1.8.0",
+]
+
+[project.scripts]
+anilist-tui = "anilist_tui.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+anilist_tui = ["*.css"]
