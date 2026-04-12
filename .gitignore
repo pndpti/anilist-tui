@@ -5,6 +5,31 @@ build/
 dist/
 wheels/
 *.egg-info
+*.egg
+pip-wheel-metadata/
+
+# Test and type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
 
 # Virtual environments
 .venv
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
