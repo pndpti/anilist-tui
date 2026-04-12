@@ -97,7 +97,15 @@ This will generate your token and store it locally in `~/.config/anilist-tui/aut
 
 ## Installation
 
-### Install as a uv tool
+### Quick install (recommended)
+
+This script installs `uv` if needed, then installs `anilist-tui`:
+
+```bash
+curl -LsSf https://raw.githubusercontent.com/pndpti/anilist-tui/master/install.sh | sh
+```
+
+### Install as a uv tool manually
 
 ```bash
 uv tool install -U anilist-tui
