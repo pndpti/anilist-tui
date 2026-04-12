@@ -16,6 +16,8 @@ Main preview:
 
 Create your AniList client:
 
+Head over to https://anilist.co/ and click on your profile -> settings -> developer -> create new client
+
 ![AniList Client Creation](assets/screenshots/01-anilist-client-creation.png)
 
 Then get the client details (Client ID):
