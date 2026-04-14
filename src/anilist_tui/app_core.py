@@ -63,9 +63,12 @@ class AnilistTUI(App):
             yield Footer()
 
     def on_mount(self) -> None:
-        app_config = load_app_config()
+        app_config = load_app_config()           
         try:
             self.theme = app_config.theme
+            if app_config.background is not None:
+                self.screen.styles.background = app_config.background
+                self.app.styles.background = app_config.background
         except Exception:
             self.theme = DEFAULT_THEME
         self.query_one("#content-scroll-container").border_title = "Anime"

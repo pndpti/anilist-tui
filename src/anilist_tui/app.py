@@ -1,4 +1,4 @@
-from .app_core import AnilistTUI
+from anilist_tui.app_core import AnilistTUI
 
 
 def main() -> None:

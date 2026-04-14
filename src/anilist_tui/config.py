@@ -4,12 +4,14 @@ import tomllib
 
 
 DEFAULT_THEME = "catppuccin-mocha"
+DEFAULT_BACKGROUND = None
 CONFIG_PATH = Path.home() / ".config" / "anilist-tui" / "config.toml"
 
 
 @dataclass
 class AppConfig:
     theme: str = DEFAULT_THEME
+    background: str|None = DEFAULT_BACKGROUND
 
 
 def _default_config_content() -> str:
@@ -39,7 +41,10 @@ def load_app_config() -> AppConfig:
         return AppConfig()
 
     theme = ui.get("theme")
-    if isinstance(theme, str) and theme.strip():
-        return AppConfig(theme=theme.strip())
+    background = ui.get("background")
+    if (isinstance(theme, str) and theme.strip()) and background is None:
+        return AppConfig(theme=theme.strip(), background=None)
+    if (isinstance(theme, str) and theme.strip()) and (isinstance(background, str) and background.strip()):
+        return AppConfig(theme=theme.strip(), background=background.strip())
 
     return AppConfig()
