@@ -107,6 +107,18 @@ This script installs `uv` if needed, then installs `anilist-tui`:
 curl -LsSf https://raw.githubusercontent.com/pndpti/anilist-tui/master/install.sh | sh
 ```
 
+### Using AUR
+
+```bash
+yay -S anilist-tui
+```
+
+or
+
+```bash
+paru -S anilist-tui
+```
+
 ### Install as a uv tool manually
 
 ```bash

@@ -33,3 +33,9 @@ htmlcov/
 .idea/
 *.swp
 .DS_Store
+
+# Files
+*.tar.gz
+*.whl
+*.pkg.tar.zst
+pkg/
